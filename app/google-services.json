@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "146250749305",
+    "firebase_url": "https://snackopedia-834a8-default-rtdb.firebaseio.com",
+    "project_id": "snackopedia-834a8",
+    "storage_bucket": "snackopedia-834a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146250749305:android:db6e9043f1164ab1ed4ba8",
+        "android_client_info": {
+          "package_name": "com.example.myapplication11111"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146250749305-63g8fak8r5vd669900qe15nt87aklr2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBABSIRJudvD-u9-0CJmSt1Fdr5qfkRVtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146250749305-63g8fak8r5vd669900qe15nt87aklr2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:146250749305:android:e4ce50d18a66981eed4ba8",
+        "android_client_info": {
+          "package_name": "com.example.registeractivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "146250749305-63g8fak8r5vd669900qe15nt87aklr2r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBABSIRJudvD-u9-0CJmSt1Fdr5qfkRVtA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "146250749305-63g8fak8r5vd669900qe15nt87aklr2r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
