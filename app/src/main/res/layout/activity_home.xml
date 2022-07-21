@@ -8,6 +8,73 @@
     android:id="@+id/drawer_layout"
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/food" />
+
+        <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:src="@drawable/drinks" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/uta" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:src="@drawable/shavarma" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/uta" />
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:src="@drawable/shavarma" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+
+
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
@@ -23,5 +90,7 @@
     <include
         layout="@layout/main_nav_drawer"/>
 </RelativeLayout>
+
 </androidx.drawerlayout.widget.DrawerLayout>
+
 
