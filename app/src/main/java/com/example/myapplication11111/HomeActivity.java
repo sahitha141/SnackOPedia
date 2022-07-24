@@ -2,6 +2,7 @@ package com.example.myapplication11111;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -12,9 +13,12 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class HomeActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
+    CardView drinks,lunch,fastfood,hotdrinks;
+    CardView brkfast;
 
 
     @Override
@@ -22,8 +26,48 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        brkfast=findViewById(R.id.brkfast);
+        drinks=findViewById(R.id.drinks);
+        lunch=findViewById(R.id.lunch);
+        fastfood=findViewById(R.id.fastfood);
+        hotdrinks=findViewById(R.id.fastfood);
        drawerLayout=findViewById(R.id.drawer_layout);
 
+       brkfast.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(HomeActivity.this,brkfast.class);
+               startActivity(intent);
+           }
+       });
+        drinks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this,drinks.class);
+                startActivity(intent);
+            }
+        });
+        lunch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this,lunch.class);
+                startActivity(intent);
+            }
+        });
+        fastfood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this,fastfood.class);
+                startActivity(intent);
+            }
+        });
+        hotdrinks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(HomeActivity.this,hotdrinks.class);
+                startActivity(intent);
+            }
+        });
     }
     public void ClickMenu(View view){
         openDrawer(drawerLayout);
@@ -56,8 +100,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void logout(final Activity activity) {
-
-
         //initialize alert dialog
         AlertDialog.Builder builder = new AlertDialog.Builder(activity);
         builder.setTitle("Logout");
@@ -79,6 +121,7 @@ public class HomeActivity extends AppCompatActivity {
         });
         builder.show();
     }
+
 
     public static void redirectActivity(Activity activity, Class aClass) {
         //initialize intent
