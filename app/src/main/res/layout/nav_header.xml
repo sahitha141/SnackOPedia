@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="ClickMenu"
-        android:outlineSpotShadowColor="@color/white"
+        android:Color="@color/backgrd"
         android:src="@drawable/menu" />
 
     <TextView
