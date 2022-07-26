@@ -36,35 +36,35 @@ public class HomeActivity extends AppCompatActivity {
        brkfast.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Intent intent = new Intent(HomeActivity.this,brkfast.class);
+               Intent intent = new Intent(HomeActivity.this,food_display.class);
                startActivity(intent);
            }
        });
         drinks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,drinks.class);
+                Intent intent=new Intent(HomeActivity.this,food_display.class);
                 startActivity(intent);
             }
         });
         lunch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,lunch.class);
+                Intent intent=new Intent(HomeActivity.this,food_display.class);
                 startActivity(intent);
             }
         });
         fastfood.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,fastfood.class);
+                Intent intent=new Intent(HomeActivity.this,food_display.class);
                 startActivity(intent);
             }
         });
         hotdrinks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(HomeActivity.this,hotdrinks.class);
+                Intent intent=new Intent(HomeActivity.this,food_display.class);
                 startActivity(intent);
             }
         });

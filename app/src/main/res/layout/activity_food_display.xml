@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".lunch">
+    tools:context=".food_display">
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridview"
+        android:numColumns="2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
