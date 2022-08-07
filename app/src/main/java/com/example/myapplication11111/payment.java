@@ -42,10 +42,8 @@ public class payment extends AppCompatActivity {
                 String upiId = upiIdtxt.getText().toString();
                 String amt = amttxt.getText().toString();
                 String msg = msgtxt.getText().toString();
-
                 String tnid  = transIdtxt.getText().toString();
                 String refId = refIdtxt.getText().toString();
-
                 if(name.isEmpty() || upiId.isEmpty()){
                     Toast.makeText(payment.this, "Name and Upi Id is necessary", Toast.LENGTH_SHORT).show();
                 }else PayUsingUpi(name,upiId,amt,msg,tnid,refId);

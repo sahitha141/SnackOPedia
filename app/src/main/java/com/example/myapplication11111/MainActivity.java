@@ -24,22 +24,23 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
-    EditText password,username;
-    Button btnlogin,account;
+    EditText password, username;
+    Button btnlogin, account;
     Spinner spinner;
     FirebaseDatabase firebaseDatabase;
     FirebaseAuth auth;
     DatabaseReference reference;
     FirebaseUser firebaseUser;
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
     @Override
     protected void onStart() {
         super.onStart();
-        firebaseUser=FirebaseAuth.getInstance().getCurrentUser();
-        if (firebaseUser !=null){
-            Intent intent = new Intent(MainActivity.this,HomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
-           startActivity(intent);
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (firebaseUser != null) {
+            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
 
     }
@@ -49,24 +50,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        password=(EditText) findViewById(R.id.password);
-        username=(EditText) findViewById(R.id.username);
-        btnlogin=(Button) findViewById(R.id.btnlogin);
-        spinner=(Spinner) findViewById(R.id.spinner);
-        account=(Button)findViewById(R.id.account);
-        auth=FirebaseAuth.getInstance();
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.usertype, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
+        password = (EditText) findViewById(R.id.password);
+        username = (EditText) findViewById(R.id.username);
+        btnlogin = (Button) findViewById(R.id.btnlogin);
+        spinner = (Spinner) findViewById(R.id.spinner);
+        account = (Button) findViewById(R.id.account);
+        auth = FirebaseAuth.getInstance();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.usertype, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String item = spinner.getSelectedItem().toString();
-                if (item.equals("Admin")) {
-                    Intent intent = new Intent(MainActivity.this,  Admin.class);
-                    startActivity(intent);
-
-                } else if (username.getText().toString().equals("user1") && password.getText().toString().equals("user1") && item.equals("User")) {
-                    Intent intent = new Intent(MainActivity.this, User.class);
+                if (item.equals("User")) {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
 
 
@@ -78,18 +75,19 @@ public class MainActivity extends AppCompatActivity {
 
                 } else {
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                    auth.signInWithEmailAndPassword(username.getText().toString(),password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    auth.signInWithEmailAndPassword(username.getText().toString(), password.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
-                               Toast.makeText(MainActivity.this,"login",Toast.LENGTH_LONG).show();
-                               Intent intent = new Intent(MainActivity.this,HomeActivity.class);
-                               startActivity(intent);
+                            if (task.isSuccessful()) {
+                                Toast.makeText(MainActivity.this, "login", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                                startActivity(intent);
                             }
                         }
+
                     });
 
-                  //  register();
+                    //  register();
 
 
                 }
@@ -104,11 +102,11 @@ public class MainActivity extends AppCompatActivity {
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,Register.class);
+                Intent intent = new Intent(MainActivity.this, Register.class);
                 startActivity(intent);
             }
         });
     }
-
-
 }
+
+
