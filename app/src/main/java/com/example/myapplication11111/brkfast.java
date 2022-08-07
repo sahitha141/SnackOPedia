@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,7 @@ public class brkfast   extends AppCompatActivity {
     RecyclerView recyclerView;
     BDMyAdapter bdMyAdapter;
     ArrayList<modelBdetails> list;
-
+    StorageReference storageReference;
     SearchView searchView;
     ProgressBar progress;
     DatabaseReference root=FirebaseDatabase.getInstance().getReference("Food").child("Breakfast");
@@ -68,15 +69,12 @@ public class brkfast   extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     modelBdetails modelBdetails = dataSnapshot.getValue(modelBdetails.class);
                     list.add(modelBdetails);
-
                 }
                 bdMyAdapter.notifyDataSetChanged();
                 progress.setVisibility(View.GONE);
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
         });
 

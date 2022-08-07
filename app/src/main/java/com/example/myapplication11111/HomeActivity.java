@@ -26,7 +26,6 @@ public class HomeActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
         brkfast=findViewById(R.id.brkfast);
         brk=(ImageView)findViewById(R.id.brk);
         drinks=findViewById(R.id.drinks);
@@ -86,7 +85,7 @@ public class HomeActivity extends AppCompatActivity{
             drawerLayout.closeDrawer(GravityCompat.START);
         }
     }
-    public void ClickAbout_us(View view){
+    public void clickAboutus(View view){
         Intent intent=new Intent(HomeActivity.this,About_us.class);
         startActivity(intent);
     }
@@ -94,10 +93,14 @@ public class HomeActivity extends AppCompatActivity{
         recreate();
     }
 
+    public void ClickFeedback(View view){
+        Intent intent=new Intent(HomeActivity.this,feedback.class);
+        startActivity(intent);
+    }
+    public void ClickRating(View view){
+        Intent intent=new Intent(HomeActivity.this,rating.class);
+        startActivity(intent);
 
-
-    public void ClickProfile(View view){
-        redirectActivity(this, ContactsContract.Profile.class);
     }
 
 
